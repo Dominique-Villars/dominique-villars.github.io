@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Les déportés Gapençais</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="assets/img/judaisme.png">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+          crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin=""></script>
+    <script src="https://kit.fontawesome.com/3198643e95.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js" defer></script>
+    <script src="assets/js/slideshow.js" defer></script>
+    <script src="assets/js/map.js" defer></script>
+</head>
+<body>
+    <nav id="navigation-bar">
+        <a class="glow-effect" href="#antisemitism">L'antisémitisme</a>
+        <a class="glow-effect" href="#hautes-alpes">Dans les Hautes-Alpes</a>
+        <a class="glow-effect" href="#pupils">Les élèves du lycée</a>
+        <a class="glow-effect" href="#gap">Les déportés gapençais</a>
+        <a class="glow-effect" href="#travels">Les voyages réalisés</a>
+    </nav>
+
+    <section id="antisemitism">
+        <h1 class="title">L'antisémitisme</h1>
+
+        <div class="body">
+            <div class="video-container">
+                <video controls>
+                    <source src="assets/video/antisemitism/old-allemagne.mp4" type="video/mp4">
+                </video>
+
+                <p class="description">En Allemagne</p>
+            </div>
+
+            <div class="video-container">
+                <video controls>
+                    <source src="assets/video/antisemitism/old-france.mp4" type="video/mp4">
+                </video>
+
+                <p class="description">En France</p>
+            </div>
+        </div>
+
+        <a href="#hautes-alpes" class="next glow-effect">
+            <i class="fa-solid fa-chevron-down icon"></i>
+            <p class="text">...et dans les Hautes-Alpes...</p>
+        </a>
+    </section>
+
+    <section id="hautes-alpes">
+        <h1 class="title">Dans les Hautes-Alpes</h1>
+
+        <div class="body">
+            <div class="slideshow">
+                <button class="select left glow-effect"><i class="fa-solid fa-circle-left"></i></button>
+
+                <div class="videos">
+                    <div class="video-container">
+                        <video controls>
+                            <source src="assets/video/hautes-alpes/1.%20Identification.mp4" type="video/mp4">
+                        </video>
+
+                        <p class="description">L'identification</p>
+                    </div>
+
+                    <div class="video-container">
+                        <video controls>
+                            <source src="assets/video/hautes-alpes/2.%20Traque.mp4" type="video/mp4">
+                        </video>
+
+                        <p class="description">La traque</p>
+                    </div>
+
+                    <div class="video-container">
+                        <video controls>
+                            <source src="assets/video/hautes-alpes/3.%20Arrestation.mp4" type="video/mp4">
+                        </video>
+
+                        <p class="description">L'arrestation</p>
+                    </div>
+
+                    <div class="video-container">
+                        <video controls>
+                            <source src="assets/video/hautes-alpes/4.%20Sélection.mp4" type="video/mp4">
+                        </video>
+
+                        <p class="description">La sélection</p>
+                    </div>
+
+                    <div class="video-container">
+                        <video controls>
+                            <source src="assets/video/hautes-alpes/5.%20Camps%20de%20transit.mp4" type="video/mp4">
+                        </video>
+
+                        <p class="description">Les camps de transit</p>
+                    </div>
+                </div>
+
+                <button class="select right glow-effect"><i class="fa-solid fa-circle-right"></i></button>
+            </div>
+        </div>
+
+        <a href="#pupils" class="next glow-effect">
+            <i class="fa-solid fa-chevron-down icon"></i>
+            <p class="text">...des élèves du lycée Dominique Villars touchés...</p>
+        </a>
+    </section>
+
+    <section id="pupils">
+        <h1 class="title">Des élèves du lycée Dominique Villars</h1>
+
+        <div class="body">
+            <div class="video-container">
+                <video controls>
+                    <source src="assets/video/pupils/Himelfarb.mp4" type="video/mp4">
+                </video>
+
+                <p class="description">Himelfarb</p>
+            </div>
+
+            <div class="video-container">
+                <video controls>
+<!--                    <source src="assets/video/antisemitism/Michelle%20Salomon-Durand.mp4" type="video/mp4">-->
+                </video>
+
+                <p class="description">Michelle Salomon-Durand</p>
+            </div>
+        </div>
+
+        <a href="#gap" class="next glow-effect">
+            <i class="fa-solid fa-chevron-down icon"></i>
+            <p class="text">Des déportés gapençais...</p>
+        </a>
+    </section>
+
+    <section id="gap">
+        <h1 class="title">Les isréalites gapençais</h1>
+
+        <div class="body">
+            <div id="map"></div>
+        </div>
+
+        <a href="#travels" class="next glow-effect">
+            <i class="fa-solid fa-chevron-down icon"></i>
+            <p class="text">Nos voyages...</p>
+        </a>
+    </section>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <div class="contact-form">
+                <a class="close" tabindex="0">&times;</a>
+                <h2 id="name"></h2>
+                <p id="description"></p>
+                <video id="video" controls>
+                    <source src="" type="video/mp4">
+                </video>
+                <img id="img" style="display: none;">
+            </div>
+        </div>
+    </div>
+
+    <section id="travels">
+        <h1 class="title">Nos voyages</h1>
+
+        <div class="body">
+            <div class="video-container">
+                <video controls>
+                    <source src="assets/video/travels/memorial.mp4" type="video/mp4">
+                </video>
+
+                <p class="description">Mémorial de la Shoah, Paris</p>
+            </div>
+
+            <div class="video-container">
+                <video controls>
+                    <source src="assets/video/travels/buchenwald.mp4" type="video/mp4">
+                </video>
+
+                <p class="description">Camp de concentration, Buchenwald</p>
+            </div>
+
+            <div class="video-container">
+                <video controls>
+                    <source src="assets/video/travels/voyage_annee_derniere.mp4" type="video/mp4">
+                </video>
+
+                <p class="description">Travail des terminales de l'année précédente</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
